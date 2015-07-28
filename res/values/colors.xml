@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <drawable name="start_bg">#f7f7f7</drawable>
+    <drawable name="background_topbar_divider">#d8d8d8</drawable>
+</resources>

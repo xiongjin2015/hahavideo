@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">哈哈视频</string>
+    <string name="action_settings">设置</string>
+    <string name="copy_right_info">Copyright © 2005- %1$s Funshion. All Rights Reserved.</string>
+
+</resources>
