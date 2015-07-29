@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="10"
         android:targetSdkVersion="22" />
 
     <application
@@ -14,21 +14,29 @@
         android:icon="@drawable/ic_launcher"
         android:killAfterRestore="false"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/HahaTheme" >
         <activity
             android:name="com.haha.video.activity.StartActivity"
-            android:label="@string/app_name" 
             android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden|stateUnspecified">
+            android:windowSoftInputMode="stateHidden|stateUnspecified" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.haha.video.activity.MainActivity" />
+        <activity
+            android:name="com.haha.video.activity.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MainPageIndicatorDefaults"
+            android:windowSoftInputMode="stateHidden|adjustUnspecified" />
     </application>
 
 </manifest>

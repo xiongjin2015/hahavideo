@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/net_error_layout"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:background="#FFCC66"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:visibility="gone" >
+
+    <TextView
+        android:id="@+id/net_error_text"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/ic_net_error"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:text="@string/error_msg_network_notavailable" />
+
+</LinearLayout>

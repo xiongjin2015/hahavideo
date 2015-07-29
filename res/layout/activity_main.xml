@@ -1,16 +1,35 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.haha.video.activity.MainActivity" >
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name" />
+    <com.haha.video.widget.TabPageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="38dip"
+        android:background="@drawable/background_topbar"
+        android:minHeight="@dimen/level_bar_height" />
 
-</RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@drawable/background_topbar_divider" />
+
+    <include layout="@layout/view_net_error" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/main_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:flipInterval="30"
+            android:persistentDrawingCache="animation" />
+
+        <include layout="@layout/view_loading_error" />
+    </FrameLayout>
+
+</LinearLayout>

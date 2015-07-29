@@ -4,6 +4,9 @@
     <string name="app_name">HaHaVideo</string>
     <string name="action_settings">Settings</string>
     <string name="img_content_desc">imageContentDescription</string>
-    <string name="copy_right_info">Copyright © 2005- %1$s Funshion. All Rights Reserved.</string>
-
+    <string name="copy_right_info">Copyright © 2005- %1$s HaHa. All Rights Reserved.</string>
+    <string name="search">Search</string>
+    <string name="loading_error_desc">load is error</string>
+    <string name="loading_error_guide">click to reload </string>
+	<string name="error_msg_network_notavailable">Network is unavailable, check the network settings!</string>
 </resources>

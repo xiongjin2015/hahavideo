@@ -1,22 +1,41 @@
 
 package com.haha.video.activity;
 
-import com.haha.video.R;
-import com.haha.video.R.id;
-import com.haha.video.R.layout;
-import com.haha.video.R.menu;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends ActionBarActivity {
+import com.haha.video.R;
+
+public class MainActivity extends HaBaseActionBarActivity {
+    
+    public static void start(Context ctx) {
+        ctx.startActivity(new Intent(ctx, MainActivity.class));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setUiOptionsForSmartBar();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initView();
+        initActionBar();
+    }
+    
+    private void initView(){
+        ActionBar bar = getSupportActionBar();
+        bar.setHomeButtonEnabled(false);
+        bar.setDisplayHomeAsUpEnabled(false);
+        bar.setDisplayShowTitleEnabled(true);
+        bar.setIcon(R.drawable.ic_log_default);
+    }
+    
+    private void initActionBar(){
+        
     }
 
     @Override
@@ -28,13 +47,11 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()) {
+        case R.id.main_action_search:
+            //SearchActivity.start(this);
+            break;
         }
-        return super.onOptionsItemSelected(item);
+        return true;
     }
 }
