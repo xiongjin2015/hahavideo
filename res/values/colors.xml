@@ -6,7 +6,7 @@
 
     <color name="textcolor_fire_red">#f86400</color>
     <color name="textcolor_black">#424549</color>
-    <color name="background_actionbar">#f76300</color>
+    <color name="background_actionbar">#8dc487</color>
 
     <drawable name="background_topbar">#f2f2f2</drawable>
 

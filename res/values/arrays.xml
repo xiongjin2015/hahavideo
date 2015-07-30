@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="main_tab">
+        <item>Recommend</item>
+        <item>Channel</item>
+        <item>Local</item>
+        <item>Mine</item>
+    </string-array>
+
+</resources>

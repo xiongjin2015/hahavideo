@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="main_tab">
+        <item>推荐</item>
+        <item>频道</item>
+        <item>本地视频</item>
+        <item>个人</item>
+    </string-array>
+
+</resources>

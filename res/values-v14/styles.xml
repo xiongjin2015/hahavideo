@@ -9,7 +9,7 @@
         <!-- API 14 theme customizations can go here. -->
     </style>
 
-    <style name="FunshionTheme" parent="Theme.AppCompat.Light">
+    <style name="HahaTheme" parent="Theme.AppCompat.Light">
 
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
         <!-- Action Bar Styles -->
