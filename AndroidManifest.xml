@@ -8,7 +8,10 @@
         android:minSdkVersion="10"
         android:targetSdkVersion="22" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name="com.haha.video.HaApplication"
         android:allowBackup="true"
         android:allowClearUserData="false"
         android:icon="@drawable/ic_launcher"

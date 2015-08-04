@@ -14,6 +14,7 @@ public class HaApplication extends Application {
         
         long startTM = System.currentTimeMillis();
         
+        HaAppInit.init(this);
         
         long endTM = System.currentTimeMillis();
         Logcat.d(TAG, "Application startup success, time used: "+String.valueOf(endTM-startTM)+"ms");

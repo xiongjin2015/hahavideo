@@ -1,0 +1,9 @@
+{
+    "rules": [
+        {
+            "pattern": "http://.*/v\\d+/adnativeindex/?version=*",
+            "expireInMillis": "300000",
+            "strong": "true"
+        }
+    ]
+}

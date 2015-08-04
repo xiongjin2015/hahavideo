@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-    
-	<TextView 
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:text="推荐"
-	    android:gravity="center"/>
-</LinearLayout>
+<com.handmark.pulltorefresh.library.PullToRefreshListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_listview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eeeeee"
+    android:cacheColorHint="@android:color/transparent"
+    android:divider="@android:color/transparent"
+    android:dividerHeight="0dip"
+    android:drawSelectorOnTop="false"
+    android:fadingEdge="none"
+    android:gravity="center"
+    android:listSelector="@android:color/transparent"
+    android:scrollbars="vertical"
+    android:stretchMode="columnWidth" />

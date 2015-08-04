@@ -12,5 +12,8 @@
 
     <color name="textcolor_tabpage_main_selected">#f86400</color>
     <color name="textcolor_tabpage_main">#333333</color>
+    
+    <drawable name="background_text_translucence">#99000000</drawable>
+    <color name="textcolor_channel_template_item_white">#fafafa</color>
 
 </resources>
