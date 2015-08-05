@@ -23,8 +23,8 @@ public class HaImageLoader {
 	private static final String TAG = "ImageLoader";
 
 	private final static DisplayImageOptions focusOptions = getDisplayImageOptions(R.drawable.ic_cycle_default);
-	//private final static DisplayImageOptions stillOptions = getDisplayImageOptions(R.drawable.icon_template_still_default);
-	//private final static DisplayImageOptions posterOptions = getDisplayImageOptions(R.drawable.icon_template_poster_default);
+	private final static DisplayImageOptions stillOptions = getDisplayImageOptions(R.drawable.ic_template_still_default);
+	private final static DisplayImageOptions posterOptions = getDisplayImageOptions(R.drawable.ic_template_poster_default);
 
 
 	public static void init(Context context, String cacheDir) {
@@ -88,6 +88,24 @@ public class HaImageLoader {
 	public static void displayFocus(String url, ImageView imageView) {
 		displayImage(url, imageView, focusOptions);
 	}
+	
+	   /**
+     * 横向显示媒体图片
+     * @param url
+     * @param imageView
+     */
+    public static void displayStill(String url, ImageView imageView) {
+        displayImage(url, imageView, stillOptions);
+    }
+    
+    /**
+     * 纵向显示媒体图片
+     * @param url
+     * @param imageView
+     */
+    public static void displayPoster(String url, ImageView imageView) {
+        displayImage(url, imageView, posterOptions);
+    }
 
 	public static void displayImage(String url, ImageView imageView) {
 		try {

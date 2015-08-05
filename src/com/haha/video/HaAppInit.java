@@ -2,10 +2,13 @@ package com.haha.video;
 
 import android.content.Context;
 
+import com.haha.common.config.HaDirMgmt;
+import com.haha.common.config.HaDirMgmt.WorkDir;
 import com.haha.common.haudid.HaAppType;
 import com.haha.common.init.HaInit;
 import com.haha.common.logger.Logcat;
 import com.haha.common.utils.HaAppInfo;
+import com.haha.video.util.HaImageLoader;
 
 public final class HaAppInit {
     
@@ -22,6 +25,9 @@ public final class HaAppInit {
         
         //initialize the video common modules
         HaInit.init(context, HaAppType.APHONE, HaAppInfo.getVersionName(context));
+        
+        //initialize the final bitmap framework module
+        HaImageLoader.init(context, HaDirMgmt.getInstance().getPath(WorkDir.CACHE_IMG)+"/aimg");
         
         isInited = true;
         

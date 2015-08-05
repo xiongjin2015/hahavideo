@@ -10,5 +10,19 @@
     <dimen name="level_bar_height">39dip</dimen>
     
     <dimen name="channel_template_item_title_textsize">13sp</dimen>
+    <dimen name="channel_template_item_time_height">14dip</dimen>
+    <dimen name="channel_template_item_time_paddingleft">4dip</dimen>
+    <dimen name="channel_template_item_time_paddingright">4dip</dimen>
+    <dimen name="channel_template_item_time_textsize">10sp</dimen>
+
+    <dimen name="channel_template_item_bottom_height">32dip</dimen>
+    <dimen name="channel_template_item_bottom_padding_bottom">2dip</dimen>
+    <dimen name="channel_template_item_bottom_item_margin">4dip</dimen>
+    <dimen name="channel_template_item_bottom_item_margin_horizontal">2dip</dimen>
+
+    <dimen name="channel_template_item_description_textsize">12sp</dimen>
+    
+    <dimen name="media_stroke_border">0.5dp</dimen>
+    <dimen name="haha_3_fontsize">12sp</dimen>
 
 </resources>

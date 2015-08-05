@@ -27,6 +27,7 @@ import com.haha.hwidget.adapter.HaBaseAdapter;
 import com.haha.hwidget.adapter.HaBaseAdapter.OnItemLoadingView;
 import com.haha.video.R;
 import com.haha.video.ui.FocusItemView;
+import com.haha.video.ui.HaMediaTemplate;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
 /**
@@ -37,6 +38,8 @@ import com.handmark.pulltorefresh.library.PullToRefreshListView;
 public class MainAllFragment extends Fragment {
     
     private final static String TAG = "MainAllFragment";
+    
+    private final static String TYPE = "index_flash";
 
     private PullToRefreshListView mRefreshListView;
     private HaCycleView<FocusItemView> mFocusCycleView;
@@ -162,8 +165,8 @@ public class MainAllFragment extends Fragment {
         List<FocusItemView> focusItems = new ArrayList<FocusItemView>();
         for (MainMedia content : focuses.getHot()) {
             Logcat.i(TAG, content.toString());
-            //if ("promotion".equals(content.getCorner_mark())) //remove ad;
-                //continue;
+            if ("promotion".equals(content.getCorner_mark())) //remove ad;
+                continue;
             focusItems.add(new FocusItemView(content));
         }
 
@@ -203,7 +206,8 @@ public class MainAllFragment extends Fragment {
         if (block == null)
             return null;
         
-        List<MainMedia> contents = block.getHot();
+        if(TYPE.equals(block.getType()))
+            return null;
 
         BlockItemView itemView = new BlockItemView(block);
         mBlockItems.put(block.getTag(), itemView);
@@ -329,24 +333,19 @@ public class MainAllFragment extends Fragment {
 
         sectionView.setVerticalSpacing(0);
 
+        //set and display block head title data and set listener;
         setSectionViewHead(sectionView, block);
 
-        int numColumns = 2;
+        final String type = block.getType();
+        int numColumns = HaMediaTemplate.getInstance(getActivity()).getNumColumns(type);
         sectionView.setNumColumns(numColumns);
         sectionView.setCompleteRow(true);
         sectionView.init(contents, new HaBaseAdapter.OnItemLoadingView<MainMedia>() {
 
             @Override
             public View getView(View convertView, MainMedia item) {
-                TextView view = new TextView(getActivity());
-                view.setText("test");
-                return view;
-                //return FSMediaTemplate.getInstance(getActivity()).getView(getActivity(), convertView, content, template);
+                return HaMediaTemplate.getInstance(getActivity()).getView(getActivity(), convertView, item, type);
             }
-//            @Override
-//            public View getView(View convertView, Content content) {
-//                
-//            }
         });
 
         //setSectionViewItemClickListener(sectionView, block);
@@ -364,8 +363,8 @@ public class MainAllFragment extends Fragment {
                 case MORE:
                 case TITLE:
                 case ALL:
+                    //TODO:here put block head click jump code
                     break;
-
                 default:
                     break;
                 }

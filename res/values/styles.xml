@@ -45,41 +45,69 @@
     <style name="Haha.actionBar.TabView" parent="@style/Widget.AppCompat.Light.ActionBar.TabView">
         <item name="android:background">@drawable/abc_tab_indicator_ab_holo</item>
     </style>
-    
+
     <style name="Haha.actionBar.TabText" parent="@style/Widget.AppCompat.Light.ActionBar.TabText">
         <item name="android:textColor">@drawable/textcolor_actionbar_tab</item>
         <item name="android:textSize">@dimen/text_fontsize_2</item>
     </style>
-    
-	<style name="Haha.actionBar.TabBar" parent="@style/Widget.AppCompat.Light.ActionBar.TabBar">
+
+    <style name="Haha.actionBar.TabBar" parent="@style/Widget.AppCompat.Light.ActionBar.TabBar">
         <item name="android:divider">@android:color/transparent</item>
         <item name="android:height">10dip</item>
         <item name="android:maxHeight">10dip</item>
         <item name="android:minHeight">10dip</item>
     </style>
-    
-	<style name="Haha.actionBar.buttonStyle" parent="@style/Widget.AppCompat.Light.ActionButton">
+
+    <style name="Haha.actionBar.buttonStyle" parent="@style/Widget.AppCompat.Light.ActionButton">
         <item name="android:maxWidth">42dip</item>
         <item name="android:minWidth">42dip</item>
         <item name="android:paddingLeft">0dip</item>
         <item name="android:paddingRight">0dip</item>
     </style>
-    
-	<style name="Haha.Light.ActionBar" parent="@style/Haha.Light.Base.ActionBar">
+
+    <style name="Haha.Light.ActionBar" parent="@style/Haha.Light.Base.ActionBar">
         <item name="background">@color/background_actionbar</item>
         <item name="titleTextStyle">@style/TextAppearance.Holo.Widget.ActionBar.Title.Haha</item>
     </style>
-    
-	<style name="TextAppearance.Holo.Widget.ActionBar.Title.Haha" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+
+    <style name="TextAppearance.Holo.Widget.ActionBar.Title.Haha" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textColor">#FFFFFF</item>
     </style>
-    
-	<style name="Haha.Light.Base.ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar">
+
+    <style name="Haha.Light.Base.ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar">
         <!-- <item name="backgroundStacked">@drawable/abc_ab_stacked_transparent_light_holo</item> -->
         <!-- <item name="backgroundSplit">@drawable/abc_ab_bottom_transparent_light_holo</item> -->
         <!-- <item name="actionOverflowButtonStyle">@style/Widget.AppCompat.Light.ActionButton.Overflow</item> -->
         <!-- <item name="progressBarStyle">@style/Widget.AppCompat.ProgressBar.Horizontal</item> -->
         <!-- <item name="indeterminateProgressStyle">@style/Widget.AppCompat.ProgressBar</item> -->
+    </style>
+
+    <style name="template_item_description">
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:paddingLeft">6dip</item>
+        <item name="android:paddingRight">6dip</item>
+        <item name="android:textColor">@color/textcolor_channel_template_item_white</item>
+        <item name="android:textSize">@dimen/haha_3_fontsize</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">20dip</item>
+        <item name="android:layout_margin">0dip</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@drawable/background_text_translucence</item>
+    </style>
+
+    <!-- channel template item title style -->
+    <style name="channel_template_item_title">
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:layout_marginTop">@dimen/channel_template_item_bottom_item_margin</item>
+        <item name="android:layout_marginBottom">@dimen/channel_template_item_bottom_item_margin</item>
+        <item name="android:layout_marginLeft">@dimen/channel_template_item_bottom_item_margin_horizontal</item>
+        <item name="android:layout_marginRight">@dimen/channel_template_item_bottom_item_margin_horizontal</item>
+        <item name="android:textColor">@color/textcolor_channel_template_item_black</item>
+        <item name="android:textSize">@dimen/channel_template_item_title_textsize</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">0dip</item>
     </style>
 
 </resources>
