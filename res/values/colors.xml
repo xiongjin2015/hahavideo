@@ -17,5 +17,7 @@
     <color name="textcolor_channel_template_item_white">#fafafa</color>
     <color name="textcolor_channel_template_item_black">#424549</color>
     <color name="haha_textcolor_white">#fafafa</color>
+    
+    <color name="common_orange_color">#ffff6d00</color>
 
 </resources>
