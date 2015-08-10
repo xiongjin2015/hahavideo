@@ -5,18 +5,18 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.support.v4.app.FragmentActivity;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.haha.common.utils.HaTime;
 import com.haha.video.R;
+import com.umeng.analytics.AnalyticsConfig;
 
 /**
  * @author xj 创建时间：2015年7月21日 下午5:00:36 修改时间：2014年6月6日 下午5:00:36 Description:启动界面
  */
-public class StartActivity extends FragmentActivity {
+public class StartActivity extends HaBaseActivity {
 
     private final static int MSG_ID_CLOSE = 1;
     private final static long SHOW_TIME = 2000;
@@ -29,6 +29,9 @@ public class StartActivity extends FragmentActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); // full screen
         setContentView(R.layout.activity_start);
         initView();
+        AnalyticsConfig.setChannel("0002");//TODO:对应渠道id：sid
+        //MobclickAgent.updateOnlineConfig(this); //set send data policy
+        AnalyticsConfig.enableEncrypt(true);//encrypte log
     }
 
     private void initView() {

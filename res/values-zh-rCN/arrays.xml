@@ -7,5 +7,11 @@
         <item>本地视频</item>
         <item>个人</item>
     </string-array>
+    
+    <string-array name="personal_items">
+        <item>意见反馈</item>
+        <item>升级</item>
+        <item>分享给好友</item>
+    </string-array>
 
 </resources>

@@ -57,7 +57,6 @@ public class ChannelFragment extends Fragment implements OnItemClickListener {
 
         @Override
         public Object getItem(int position) {
-            // TODO Auto-generated method stub
             return imageArray[position];
         }
 

@@ -2,6 +2,7 @@ package com.haha.video.activity;
 
 
 import com.haha.common.utils.HaAppInfo;
+import com.umeng.analytics.MobclickAgent;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -23,6 +24,19 @@ public class HaBaseActionBarActivity extends ActionBarActivity {
         Intent intent = new Intent(from, to);
         from.startActivity(intent);
     }
+    
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
+    }
+    
 
     /**
      * This must be done before the decor view has been created.

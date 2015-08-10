@@ -24,5 +24,7 @@
     
     <dimen name="media_stroke_border">0.5dp</dimen>
     <dimen name="haha_3_fontsize">12sp</dimen>
+    
+    <dimen name="textview_image_padding">10dip</dimen>
 
 </resources>

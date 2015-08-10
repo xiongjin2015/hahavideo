@@ -2,13 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.haha.video"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0.0.0" >
 
     <uses-sdk
         android:minSdkVersion="10"
         android:targetSdkVersion="22" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name="com.haha.video.HaApplication"
@@ -18,6 +22,11 @@
         android:killAfterRestore="false"
         android:label="@string/app_name"
         android:theme="@style/HahaTheme" >
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="55c84ad5e0f55ac1f30007cd" >
+        </meta-data>
+
         <activity
             android:name="com.haha.video.activity.StartActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -40,6 +49,8 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.PageIndicatorDefaults"
             android:windowSoftInputMode="stateHidden|adjustUnspecified" />
+        <!-- 集成umeng反馈的activity -->
+        <activity android:name="com.umeng.fb.ConversationActivity" />
     </application>
 
 </manifest>

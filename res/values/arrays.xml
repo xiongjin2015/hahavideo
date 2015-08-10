@@ -7,5 +7,10 @@
         <item>Local</item>
         <item>Mine</item>
     </string-array>
+    <string-array name="personal_items">
+        <item>Feedback</item>
+        <item>Update</item>
+        <item>Share</item>
+    </string-array>
 
 </resources>
