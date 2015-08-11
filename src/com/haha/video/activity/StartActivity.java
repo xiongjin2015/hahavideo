@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.haha.common.utils.HaTime;
 import com.haha.video.R;
 import com.umeng.analytics.AnalyticsConfig;
+import com.umeng.update.UmengUpdateAgent;
 
 /**
  * @author xj 创建时间：2015年7月21日 下午5:00:36 修改时间：2014年6月6日 下午5:00:36 Description:启动界面
@@ -32,6 +33,7 @@ public class StartActivity extends HaBaseActivity {
         AnalyticsConfig.setChannel("0002");//TODO:对应渠道id：sid
         //MobclickAgent.updateOnlineConfig(this); //set send data policy
         AnalyticsConfig.enableEncrypt(true);//encrypte log
+        UmengUpdateAgent.update(this); //check if version is new
     }
 
     private void initView() {

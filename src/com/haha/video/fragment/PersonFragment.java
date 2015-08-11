@@ -12,6 +12,7 @@ import android.widget.ListView;
 import com.haha.video.R;
 import com.haha.video.adapter.PersonalAdapter;
 import com.umeng.fb.FeedbackAgent;
+import com.umeng.update.UmengUpdateAgent;
 
 public class PersonFragment extends Fragment implements OnItemClickListener{
     
@@ -46,6 +47,7 @@ public class PersonFragment extends Fragment implements OnItemClickListener{
             agent.startFeedbackActivity();
             break;
         case 1:
+            UmengUpdateAgent.forceUpdate(getActivity());
             break;
         case 2:
             break;
