@@ -165,7 +165,7 @@ public class MainAllFragment extends Fragment {
         List<FocusItemView> focusItems = new ArrayList<FocusItemView>();
         for (MainMedia content : focuses.getHot()) {
             Logcat.i(TAG, content.toString());
-            if ("promotion".equals(content.getCorner_mark())) //remove ad;
+            if ("promotion".equals(content.getCorner_mark())||content.getTitle().contains("百度视频")) //remove ad;
                 continue;
             focusItems.add(new FocusItemView(content));
         }

@@ -9,4 +9,7 @@
     <string name="loading_error_desc">load is error</string>
     <string name="loading_error_guide">click to reload </string>
     <string name="error_msg_network_notavailable">Network is unavailable, check the network settings!</string>
+    <string name="share_to_friends">friend recommend</string>
+    <string name="share_to_friends_content">I am using Haha Mobile video watching massive free movies, recommend to you%1$s</string>
+
 </resources>
