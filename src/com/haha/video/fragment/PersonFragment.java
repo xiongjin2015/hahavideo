@@ -39,13 +39,13 @@ public class PersonFragment extends Fragment implements OnItemClickListener {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        initVIew();
+        initView();
         mItems = getResources().getStringArray(R.array.personal_items);
         PersonalAdapter personalAdapter = new PersonalAdapter(mItems, mImages, getActivity());
         mListView.setAdapter(personalAdapter);
     }
 
-    private void initVIew() {
+    private void initView() {
         mListView = (ListView) getView().findViewById(R.id.view_main_pesonal_listview);
         mListView.setOnItemClickListener(this);
     }

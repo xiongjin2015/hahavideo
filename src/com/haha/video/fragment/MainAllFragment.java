@@ -65,32 +65,45 @@ public class MainAllFragment extends Fragment {
         View root = getView();
         initView(root);
         initListener(root);
+        requestHomePageData();
     }
     
     @Override
     public void onResume() {
         super.onResume();
+        Logcat.i(TAG, "getUserVisibleHint()"+getUserVisibleHint());
+        if (getUserVisibleHint()) {
+            startFocusAutoScroll();
+            refreshHomePage();
+        }
+    }
+    
+    private void refreshHomePage() {
+        if (mRefreshAdapter == null)
+            return;
+        mRefreshAdapter.notifyDataSetChanged();
     }
     
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
+        Logcat.i(TAG, "isVisibleToUser:"+isVisibleToUser);
         if (isVisibleToUser) {
             startFocusAutoScroll();
-            if (!alreadyLoadView) {
-                alreadyLoadView = true;
+            //if (!alreadyLoadView) {
+                //alreadyLoadView = true;
                 requestHomePageData();
-            }
+            //}
         } else {
             stopFocusAutoScroll();
         }
     }
 
     private void requestHomePageData() {
-        if (isRequestHomePageData){
-            onRequestHomePageDataEnd();
-            return;
-        }
+//        if (isRequestHomePageData){
+//            onRequestHomePageDataEnd();
+//            return;
+//        }
         isRequestHomePageData = true;
         Logcat.i(TAG, "requestHomePageData");
         try {
@@ -218,17 +231,19 @@ public class MainAllFragment extends Fragment {
         
         @Override
         public void onSuccess(SResp sresp) {
+            refreshHomePageData((MainEntity) sresp.getEntity());
             try {
-                refreshHomePageData((MainEntity) sresp.getEntity());
+                
             } catch (Exception e) {
                 Logcat.e(TAG, "error:"+e.getMessage());
             }
-            onRequestHomePageDataEnd();
+            //onRequestHomePageDataEnd();
             Logcat.i(TAG, "onSuccess-requestdata");
         }
         
         @Override
         public void onFailed(EResp eresp) {
+            Logcat.i(TAG, "onFailed-requestdata");
             // TODO Auto-generated method stub
             
         }
